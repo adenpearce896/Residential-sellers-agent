@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Can a Residential Sellers Agent Determine the Right Listing Price When Comparable Sales Are Inconsistent? | Linda Roth Homes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --white:#ffffff;
+    --paper:#f6f5f3;
+    --ink:#111111;
+    --black:#000000;
+    --red:#c31432;
+    --red-dark:#9c0f26;
+    --grey:#5a5a5a;
+    --rule:#111111;
+  }
+
+  *{ box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    background:var(--white);
+    color:var(--ink);
+    font-family:'Public Sans', Arial, sans-serif;
+    font-size:17px;
+    line-height:1.7;
+  }
+
+  h1,h2,h3{
+    font-family:'Zilla Slab', Georgia, serif;
+    color:var(--black);
+    line-height:1.2;
+    margin:0 0 0.5em 0;
+  }
+
+  a{ color:var(--red); text-decoration:underline; text-decoration-color:rgba(195,20,50,0.4); }
+  a:hover{ color:var(--red-dark); }
+
+  img{ max-width:100%; display:block; }
+
+  /* ---------- Header ---------- */
+  .site-header{
+    background:var(--black);
+    border-bottom:3px solid var(--red);
+  }
+  .header-inner{
+    max-width:1080px;
+    margin:0 auto;
+    padding:18px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .logo{ height:44px; width:auto; }
+  .header-contact{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    flex-wrap:wrap;
+  }
+  .header-contact a{
+    color:#f0f0f0;
+    text-decoration:none;
+    font-size:14.5px;
+    font-weight:500;
+  }
+  .header-contact a:hover{ color:var(--red); }
+  .btn-red{
+    display:inline-block;
+    background:var(--red);
+    color:var(--white) !important;
+    padding:10px 20px;
+    font-weight:600;
+    font-size:14.5px;
+    text-decoration:none !important;
+    border:1px solid var(--red);
+  }
+  .btn-red:hover{ background:var(--red-dark); border-color:var(--red-dark); }
+
+  /* ---------- Hero / Title ---------- */
+  .hero{
+    max-width:800px;
+    margin:0 auto;
+    padding:56px 24px 20px 24px;
+    text-align:center;
+  }
+  .hero h1{
+    font-size:clamp(28px, 4vw, 40px);
+    font-weight:700;
+    max-width:22ch;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .hero-rule{
+    width:72px;
+    height:4px;
+    background:var(--red);
+    margin:22px auto 0 auto;
+  }
+  .eyebrow-loc{
+    margin:16px 0 0 0;
+    color:var(--grey);
+    font-size:15px;
+  }
+
+  /* ---------- Article body ---------- */
+  .article-wrap{
+    max-width:800px;
+    margin:0 auto;
+    padding:20px 24px 10px 24px;
+  }
+  .article-wrap p{ margin:0 0 20px 0; color:#1c1c1c; }
+  .article-wrap h2{
+    font-size:26px;
+    margin-top:52px;
+    padding-top:24px;
+    border-top:1px solid #dddddd;
+  }
+  .article-wrap h2:first-of-type{ margin-top:36px; }
+  .article-wrap strong{ color:var(--black); }
+
+  .article-wrap a{ font-weight:600; }
+
+  /* ---------- INTERLINKING SECTION ---------- */
+  .interlink-section{
+    background:var(--paper);
+    border-left:4px solid var(--red);
+    padding:28px 32px;
+    margin:40px 0;
+    text-align:center;
+  }
+  .interlink-section .interlink-eyebrow{
+    font-family:'Public Sans', Arial, sans-serif;
+    font-size:12px;
+    letter-spacing:0.14em;
+    color:var(--grey);
+    text-transform:uppercase;
+    font-weight:600;
+    margin:0 0 6px;
+  }
+  .interlink-section .interlink-title{
+    font-family:'Zilla Slab', Georgia, serif;
+    font-weight:700;
+    font-size:1.2rem;
+    color:var(--black);
+    margin:0 0 12px;
+    line-height:1.3;
+  }
+  .interlink-section .interlink-title a{
+    color:var(--black);
+    text-decoration:none;
+    border-bottom:2px solid var(--red);
+    transition:color 0.2s ease;
+  }
+  .interlink-section .interlink-title a:hover{
+    color:var(--red);
+  }
+  .interlink-section p{
+    font-size:0.98rem;
+    color:#252525;
+    margin:0 0 18px;
+    text-align:left;
+  }
+  .interlink-section .button{
+    display:inline-block;
+    background:var(--red);
+    color:var(--white) !important;
+    padding:12px 32px;
+    font-weight:600;
+    font-size:14px;
+    text-decoration:none !important;
+    border:1px solid var(--red);
+    transition:background 0.2s ease, transform 0.2s ease;
+  }
+  .interlink-section .button:hover{
+    background:var(--red-dark);
+    border-color:var(--red-dark);
+    transform:translateY(-2px);
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq-section h2{ margin-bottom:8px; }
+  .faq-item{
+    border-left:4px solid var(--black);
+    background:var(--paper);
+    padding:20px 24px;
+    margin:0 0 16px 0;
+  }
+  .faq-item h3{
+    font-size:19px;
+    margin-bottom:10px;
+  }
+  .faq-item p{ margin:0; color:#252525; }
+
+  /* ---------- Map section ---------- */
+  .map-section{
+    max-width:800px;
+    margin:56px auto 0 auto;
+    padding:0 24px;
+  }
+  .map-section h2{
+    font-size:26px;
+    padding-top:24px;
+    border-top:1px solid #dddddd;
+  }
+  .map-section p{ color:#1c1c1c; margin:0 0 20px 0; }
+  .map-frame{
+    position:relative;
+    border:3px solid var(--black);
+    padding:10px;
+    background:var(--white);
+  }
+  .map-frame::after{
+    content:"";
+    position:absolute;
+    bottom:-9px; right:-9px;
+    width:18px; height:18px;
+    border-bottom:2px solid var(--red);
+    border-right:2px solid var(--red);
+  }
+  .map-frame iframe{
+    width:100%;
+    height:380px;
+    border:0;
+    display:block;
+  }
+  .map-cta{ margin-top:18px; }
+
+  /* ---------- Conclusion ---------- */
+  .conclusion{
+    max-width:800px;
+    margin:0 auto;
+    padding:0 24px 10px 24px;
+  }
+  .conclusion h2{
+    font-size:26px;
+    margin-top:52px;
+    padding-top:24px;
+    border-top:1px solid #dddddd;
+  }
+
+  /* ---------- Footer ---------- */
+  .site-footer{
+    background:var(--black);
+    color:#d8d8d8;
+    margin-top:60px;
+    border-top:3px solid var(--red);
+  }
+  .footer-inner{
+    max-width:1080px;
+    margin:0 auto;
+    padding:40px 24px 32px 24px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:32px;
+    justify-content:space-between;
+  }
+  .footer-brand .logo{ height:44px; margin-bottom:14px; filter:brightness(0) invert(1); }
+  .footer-brand p{ margin:0 0 4px 0; font-size:14.5px; color:#cfcfcf; }
+  .footer-brand p.name{ color:#ffffff; font-weight:600; font-size:16px; margin-bottom:6px; }
+  .footer-links{ display:flex; flex-direction:column; gap:8px; }
+  .footer-links a{ color:#e6e6e6; text-decoration:none; font-size:14.5px; }
+  .footer-links a:hover{ color:var(--red); }
+  .footer-bottom{
+    border-top:1px solid #2a2a2a;
+    text-align:center;
+    padding:16px 24px;
+    font-size:13px;
+    color:#8a8a8a;
+  }
+
+  @media (max-width:600px){
+    .header-inner{ flex-direction:column; align-items:flex-start; }
+    .map-frame iframe{ height:300px; }
+    .interlink-section{ padding:22px 18px; }
+    .interlink-section p{ text-align:left; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <img class="logo" src="https://t2.realgeeks.media/thumbnail/1PHov2YPptkom61W67Bm9ksCHH8=/fit-in/400x86/filters:format(png)/u.realgeeks.media/lindarothhomes/Screenshot_2025-11-14_at_9.10.58_AM-removebg-preview.png" alt="Linda Roth Homes logo">
+    <div class="header-contact">
+      <a href="tel:+13238644211">(323) 864-4211</a>
+      <a href="mailto:connect@lindarothhomes.com">connect@lindarothhomes.com</a>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <h1>How Can a Residential Sellers Agent Determine the Right Listing Price When Comparable Sales Are Inconsistent?</h1>
+  <div class="hero-rule"></div>
+  <p class="eyebrow-loc">118 N Larchmont Blvd, Los Angeles, CA 90004</p>
+</div>
+
+<article class="article-wrap">
+
+  <p>Setting the right listing price is one of the most important decisions when selling a home. Price can influence how quickly a property attracts attention, how many qualified buyers show interest, and how strong the final offers may be. However, pricing becomes much more difficult when recent comparable sales show inconsistent results.</p>
+
+  <p>One similar property may have sold at a high price, while another nearby property sold for significantly less. These differences can leave sellers wondering which sale truly reflects their home's value. A skilled <strong><a href="https://maps.app.goo.gl/GKdsR8k3uKD3cb6p8" target="_blank" rel="noopener">best, professional Residential sellers agent in Los Angeles CA</a></strong> must look beyond the numbers and understand why each comparable property sold at its specific price.</p>
+
+  <p>For homeowners looking for a <strong>Residential sellers agent in Los Angeles CA</strong>, careful market analysis can help create a more realistic pricing strategy. Linda Roth Burrell Realtor can help sellers review property features, local market conditions, competing listings, and recent sales before determining an appropriate listing range.</p>
+
+  <h2>Why Do Comparable Sales Sometimes Give Conflicting Signals?</h2>
+  <p>Comparable sales are properties that recently sold and share similar characteristics with the home being evaluated. However, no two homes are exactly the same. Even properties located close together can differ in condition, upgrades, lot size, views, layout, and buyer appeal.</p>
+  <p>Timing can also create major differences. A home sold several months earlier may have entered the market under different interest rates and inventory conditions. Buyer demand may have changed since that transaction.</p>
+  <p>Some sales may also involve unusual circumstances. A seller needing a quick closing may accept a lower offer, while a highly competitive property may sell above its expected range.</p>
+  <p>A professional <strong>Real estate agent</strong> studies the reasons behind each sale instead of treating every comparable price as equally reliable.</p>
+
+  <h2>How Does Location Affect Comparable Property Values?</h2>
+  <p>Location can create significant differences between properties that otherwise appear similar. A home on a quiet street may have greater appeal than one located near heavy traffic. Access to schools, parks, shopping, transportation, and employment areas may also influence buyer demand.</p>
+  <p>Even small geographic differences can matter in large and diverse markets. One neighborhood may have stronger demand, different property styles, or more limited inventory than another nearby area.</p>
+  <p>A <strong>Residential sellers agent</strong> should therefore avoid comparing homes based only on distance. The agent must consider whether the comparable properties truly compete for the same group of buyers.</p>
+  <p>Local knowledge helps explain why one nearby property sold at a higher or lower price than another.</p>
+
+  <h2>Why Should Property Condition Be Adjusted Carefully?</h2>
+  <p>Property condition is one of the most common reasons comparable sales appear inconsistent. A recently updated home may sell for more than a similar property needing repairs.</p>
+  <p>However, agents should avoid assuming that every renovation adds its full cost to the property's value. Buyers may value some improvements more than others.</p>
+  <p>For example, updated kitchens and bathrooms may attract attention, while highly personalized upgrades may have limited appeal.</p>
+  <p>The condition of major systems also matters. Roofing, electrical components, plumbing, heating, cooling, and structural maintenance can influence what buyers are willing to pay.</p>
+  <p>A careful <strong>Residential sellers agent in Los Angeles CA</strong> compares the overall condition of each property before using its sale price to estimate value.</p>
+
+  <h2>How Can Size and Layout Create Pricing Differences?</h2>
+  <p>Square footage is useful, but it should not be the only measurement used when comparing homes. A larger property does not automatically provide greater value if the layout is inefficient.</p>
+  <p>The number of bedrooms and bathrooms, usable living areas, storage, parking, and outdoor space can affect buyer interest.</p>
+  <p>Two homes with similar sizes may attract different buyers because one has a more practical layout.</p>
+  <p>Natural light, room proportions, privacy, and flexibility can also influence marketability.</p>
+  <p>A <strong>Real estate agent</strong> should study how buyers are likely to perceive the property rather than relying entirely on numerical measurements.</p>
+
+  <h2>What Role Do Current Listings and Pending Sales Play?</h2>
+  <p>Closed sales show what buyers paid in the past. Current listings show what sellers are asking today. Pending properties can provide clues about what buyers may currently be willing to accept.</p>
+  <p>All three categories can provide useful information.</p>
+  <p>When several similar homes are actively listed at lower prices, a seller may face stronger competition. If comparable properties are receiving accepted offers quickly, buyer demand may support a stronger price.</p>
+  <p>A <strong>Residential sellers agent</strong> should combine recent closed sales with current competition instead of relying on historical data alone.</p>
+  <p>This approach is especially important when market conditions are changing.</p>
+
+  <h2>How Should an Agent Evaluate Unusual Sales?</h2>
+  <p>Not every transaction represents normal market behavior. Some comparable sales may involve circumstances that significantly affect price.</p>
+  <p><strong>Foreclosed property sales</strong>, for example, may involve condition problems, limited seller flexibility, or financial urgency. These factors can make the final price different from a traditional sale.</p>
+  <p>Similarly, a property sold because of relocation or another urgent situation may not represent the highest price the market could support.</p>
+  <p>An agent should investigate whether unusual circumstances affected the transaction before using it as a primary comparable.</p>
+  <p>This does not mean these sales should always be ignored. Instead, their circumstances should be understood before giving them significant weight.</p>
+
+  <h2>How Can New Construction Affect a Home's Listing Price?</h2>
+  <p>New construction can create both opportunities and challenges for existing homeowners. Newly built properties may attract buyers with modern layouts, updated systems, energy-efficient features, and fewer immediate maintenance concerns.</p>
+  <p>However, an older home may offer advantages that new construction does not provide. It may have a larger lot, an established neighborhood, mature landscaping, or a more convenient location.</p>
+  <p><strong>New construction services</strong> can also change local inventory levels. When many new homes become available, sellers of existing properties may need stronger pricing and marketing strategies.</p>
+  <p>A Residential sellers agent should compare the advantages of the existing property against competing new homes rather than assuming new construction automatically establishes the correct market value.</p>
+
+  <h2>How Do Investment and Rental Factors Influence Value?</h2>
+  <p>Some properties attract buyers because of their potential income as well as their residential use. In these cases, traditional comparable sales may not provide the complete picture.</p>
+  <p>An <strong>Income property sellers agent</strong> may consider rental demand, operating expenses, occupancy potential, and expected returns when evaluating an investment property.</p>
+  <p><strong>Furnished property rentals</strong> can also have unique considerations. Furniture, rental flexibility, location, and potential income may affect how investors evaluate the property.</p>
+  <p>These factors should be separated from the analysis of a typical owner-occupied home. A property should be priced according to the buyers it is most likely to attract.</p>
+  <p>Understanding the likely buyer pool can help the agent choose more relevant comparable properties.</p>
+
+  <h2>How Can Market Trends Help Resolve Conflicting Data?</h2>
+  <p>Market trends can help explain why comparable sales point in different directions.</p>
+  <p>Interest rates, buyer demand, inventory, and economic conditions can influence how quickly properties sell and what buyers are willing to pay.</p>
+  <p>For example, a home sold during a period of very limited inventory may have received multiple offers. A similar home sold later may face more competition.</p>
+  <p>The opposite can also occur when demand increases.</p>
+  <p>A <strong>Residential sellers agent in Los Angeles CA</strong> should study the direction of the market rather than looking only at individual transactions.</p>
+  <p>Price reductions, days on market, pending sales, and buyer activity can provide additional context when historical sales appear inconsistent.</p>
+
+  <h2>How Can Linda Roth Burrell Realtor Build a Balanced Pricing Strategy?</h2>
+  <p>The best pricing strategy does not depend on finding one perfect comparable sale. Instead, it requires combining several reliable sources of information.</p>
+  <p><a href="https://lindarothhomes.realestate/" target="_blank" rel="noopener">Linda Roth Burrell Realtor</a> can help sellers examine recent sales, active competition, pending transactions, location differences, property condition, market trends, and buyer demand.</p>
+  <p>Each comparable property can be given appropriate weight based on how closely it matches the home being listed.</p>
+  <p>This creates a realistic value range rather than an unrealistic single number.</p>
+  <p>The final listing price should also consider the seller's goals and timeline. A seller seeking a quick transaction may use a different strategy than someone who has greater flexibility.</p>
+  <p>Careful pricing can help a property compete effectively without starting too high or leaving potential value unrecognized.</p>
+
+  <!-- Interlinking Section - Link to Article 1 -->
+  <div class="interlink-section">
+    <p class="interlink-eyebrow">Related Guide</p>
+    <h3 class="interlink-title">
+      <a href="https://adenpearce896.github.io/Real-estate-agents/">How Can a Real Estate Agent Determine Whether a Property Is Overvalued When Comparable Sales Give Conflicting Signals?</a>
+    </h3>
+    <p>When comparable sales provide conflicting signals, determining whether a property is overvalued requires careful analysis. Learn how professional real estate agents evaluate location differences, property condition, size, market trends, and special circumstances to build a realistic value estimate.</p>
+    <a class="button" href="https://adenpearce896.github.io/Real-estate-agents/">Continue Reading →</a>
+  </div>
+
+</article>
+
+<section class="article-wrap faq-section">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <h3>Why are comparable sales sometimes so different from each other?</h3>
+    <p>Comparable properties can differ in condition, location, upgrades, lot size, layout, timing, and market circumstances. A detailed analysis helps explain why their final sale prices vary.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Should the highest comparable sale determine my listing price?</h3>
+    <p>Not necessarily. The highest sale may involve unique upgrades, superior location, unusual buyer competition, or other advantages that your property does not share.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>How important are current market conditions when pricing a home?</h3>
+    <p>Current conditions are extremely important because buyer demand, inventory, and financing conditions can change. Older comparable sales may not fully represent today's market.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Should foreclosed property sales be used as comparable properties?</h3>
+    <p>They can provide useful information, but they should be evaluated carefully. Foreclosure circumstances and property condition may affect the sale price differently than a traditional transaction.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Can a Residential sellers agent change the listing price after the property goes on the market?</h3>
+    <p>Yes. If market response shows that the price is not attracting qualified interest, the seller and agent can review feedback, competition, and market changes before adjusting the strategy.</p>
+  </div>
+</section>
+
+<section class="conclusion">
+  <h2>Conclusion</h2>
+  <p>When comparable sales are inconsistent, determining the right listing price requires careful analysis and professional judgment. Sellers should not rely only on the highest nearby sale or a simple online estimate.</p>
+  <p>Location, property condition, size, layout, market trends, active competition, unusual sales circumstances, and buyer demand can all influence value.</p>
+  <p>For homeowners searching for a <strong>Residential sellers agent in Los Angeles CA</strong>, working with <strong><a href="https://lindarothhomes.realestate/" target="_blank" rel="noopener">Linda Roth Burrell Realtor</a></strong> can provide a more complete approach to pricing. By analyzing the reasons behind conflicting comparable sales, a skilled <strong>Real estate agent</strong> can develop a realistic strategy that reflects the property's true market position.</p>
+  <p>The right price can help attract qualified buyers, create stronger interest, and support a successful selling experience. Careful analysis gives sellers a better foundation for making one of the most important decisions in the entire real estate process.</p>
+</section>
+
+<section class="map-section">
+  <h2>Find Us on the Map</h2>
+  <p>Visit our Los Angeles office at 118 N Larchmont Blvd, or find us on Google Maps below.</p>
+  <div class="map-frame">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4006.555599139137!2d-118.32580621054744!3d34.0733625820292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b9e728d824e1%3A0x7db47683f7ffa3ca!2sLinda%20Roth%20Burrell%20Realtor!5e0!3m2!1sen!2s!4v1788290955038!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
+  <p class="map-cta"><a class="btn-red" href="https://maps.app.goo.gl/GKdsR8k3uKD3cb6p8" target="_blank" rel="noopener">Get Directions on Google Maps</a></p>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img class="logo" src="https://t2.realgeeks.media/thumbnail/1PHov2YPptkom61W67Bm9ksCHH8=/fit-in/400x86/filters:format(png)/u.realgeeks.media/lindarothhomes/Screenshot_2025-11-14_at_9.10.58_AM-removebg-preview.png" alt="Linda Roth Homes logo">
+      <p class="name">Ana Alvarez, Realty One Group</p>
+      <p>118 N Larchmont Blvd, Los Angeles, CA 90004, USA</p>
+      <p>(323) 864-4211</p>
+      <p>connect@lindarothhomes.com</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://lindarothhomes.realestate/" target="_blank" rel="noopener">lindarothhomes.realestate</a>
+      <a href="tel:+13238644211">(323) 864-4211</a>
+      <a href="mailto:connect@lindarothhomes.com">connect@lindarothhomes.com</a>
+      <a href="https://maps.app.goo.gl/GKdsR8k3uKD3cb6p8" target="_blank" rel="noopener">Find Us on Google Maps</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Linda Roth Homes. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
